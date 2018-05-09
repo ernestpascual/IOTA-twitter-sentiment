@@ -4,8 +4,9 @@ A simple twitter sentiment analyzer that lets you check tweets about the crypocu
 ## Requirements
 * Numpy
 * Tweepy 
-* Textblob
+* Textblob 
+* nltk
 
 ## Sources
-Part of the code is from this tutorial by Siraj Parval [https://github.com/llSourcell/twitter_sentiment_challengey]
+Part of the code is from this tutorial by Siraj Parval. https://github.com/llSourcell/twitter_sentiment_challengey
 
