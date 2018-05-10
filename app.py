@@ -11,11 +11,11 @@ import numpy
 from textblob import TextBlob
 
 # Twitter Authentication
-consumer_key= 'lxibJuwsWtqJDIksx7vBLx0mr'
-consumer_secret= '5gWQqXVFhqsHoGDLFqRlw3yVFWB8k4p2zHWj1cz5dC2cTdApbn'
+consumer_key= 'CKey_HERE'
+consumer_secret= 'CSecretKey_HERE'
 
-access_token= '83212785-MFNwwaukW4D1WJYxDMN9kPfs7vJtvts9TCZ6cr0Fl'
-access_token_secret= 'JxxZD5IBWdVmDrWfzEfUrl5qgTKtQKJBbYnDnVAZAjmBe'
+access_token= 'AT_HERE'
+access_token_secret= 'ATS_HERE
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
