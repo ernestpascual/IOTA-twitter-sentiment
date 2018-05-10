@@ -11,11 +11,11 @@ import numpy
 from textblob import TextBlob
 
 # Twitter Authentication
-consumer_key= 'KEY_HERE
-consumer_secret= 'SECRET_KEY_HERE'
+consumer_key= 'lxibJuwsWtqJDIksx7vBLx0mr'
+consumer_secret= '5gWQqXVFhqsHoGDLFqRlw3yVFWB8k4p2zHWj1cz5dC2cTdApbn'
 
-access_token= 'ACCESS_TOKEN_HERE'
-access_token_secret= 'TOKEN_SECRET_HERE'
+access_token= '83212785-MFNwwaukW4D1WJYxDMN9kPfs7vJtvts9TCZ6cr0Fl'
+access_token_secret= 'JxxZD5IBWdVmDrWfzEfUrl5qgTKtQKJBbYnDnVAZAjmBe'
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -23,7 +23,12 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 # Search IOTA tweets
-tweets = api.search('IOTA')
+query = 'IOTA'
+max_tweets = 300
+
+# Using cursors to fill in parameters and adjust size fo tweets
+# https://github.com/tweepy/tweepy/blob/master/docs/cursor_tutorial.rst
+tweets = [status for status in tweepy.Cursor(api.search, q=query).items(max_tweets)]
 
 # avg_polarity list declartion
 avg_polarity = []
@@ -43,7 +48,6 @@ if (avg_polarity > 0):
     print "IOTA is looking pretty good. Check your technical analysis for points of entry."
 else:
     print "You might want to check other cryptos."
-
 
 
 
